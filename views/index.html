@@ -1,8 +1,8 @@
 {{ template "layout/base.html" . }}
 
 {{define "head"}}
+<meta http-equiv="refresh" content="10">
 <title>OpenVPNAdmin</title>
-<meta http-equiv="refresh" content="60">
 {{end}}
 
 {{define "body"}}
@@ -210,7 +210,7 @@
         <a href="javascript:void(0)" class="btn btn-sm btn-info btn-flat pull-left">Place New Order</a>
         <a href="javascript:void(0)" class="btn btn-sm btn-default btn-flat pull-right">View All Orders</a>
       </div>
-    -->
+      -->
       <!-- /.box-footer -->
     </div>
     <!-- /.box -->
@@ -228,7 +228,7 @@
       <div class="info-box-content">
       </span>
       <span class="info-box-text">
-        OpenVPN version (2.5.x or higher required): <span class="info-box-number3">{{ .ovversion }}
+        OpenVPN version: <span class="info-box-number3">{{ .ovversion }}
       </span>
       </div>
       <!-- /.info-box-content -->
@@ -243,9 +243,9 @@
         <i class="ion ion-ios-gear"></i>
       </span>
       <div class="info-box-content">
-        <span class="info-box-text">Operating system (Debian, Ubuntu, Raspbian supported):</span>
+        <span class="info-box-text">Operating system:</span>
         <span class="info-box-number3">{{ .sysinfo.Os }}</span>
-        <span class="info-box-text">Architecture (amd64, arm64, armv7 supported): </span>
+        <span class="info-box-text">Architecture: </span>
         <span class="info-box-number3">{{ .sysinfo.Arch }} </span>
       </div>
       <!-- /.info-box-content -->
@@ -261,4 +261,3 @@
 <!-- /.row -->
 
 {{end}}
-
