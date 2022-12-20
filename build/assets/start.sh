@@ -53,4 +53,3 @@ fi
 mkdir -p db
 echo "Starting OpenVPN Admin Web Ui!"
 ./pivpn-tap-web-ui
-
