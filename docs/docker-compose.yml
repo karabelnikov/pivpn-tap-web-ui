@@ -1,23 +1,23 @@
 version: '2'
 services:
   gui:
-    image: bnhf/pivpn-tap-web-ui:latest
+    image: pivpn-tap-web-ui:latest
     container_name: openvpn-gui-tap
     environment:
-    - OPENVPN_ADMIN_USERNAME=admin
-    - OPENVPN_ADMIN_PASSWORD=b3secure
-    - COUNTRY=${COUNTRY}
-    - PROVINCE=${PROVINCE}
-    - CITY=${CITY}
-    - ORG=${ORG}
-    - EMAIL=${EMAIL}
-    - OU=${OU}
-    - PIVPN_SERVER=${PIVPN_SERVER}
-    - PIVPN_CONF=${PIVPN_CONF}
-    - TZ=${TZ}
+      - OPENVPN_ADMIN_USERNAME=admin
+      - OPENVPN_ADMIN_PASSWORD=b3secure
+      - PIVPN_SERVER=${PIVPN_SERVER}
+      - PIVPN_CONF=${PIVPN_CONF}
+      - TZ=${TZ}
+      - ENABLEHTTPS=${ENABLEHTTPS}
+      - HTTPSPORT=${HTTPSPORT}
+      - HTTPSCERT=${HTTPSCERT}
+      - HTTPSKEY=${HTTPSKEY}
     ports:
-     - "8080:8080/tcp"
+       - "8080:8080/tcp"
+       - "8443:8443/tcp"
     restart: always
     volumes:
-     - /etc/openvpn:/etc/openvpn
-     - ./openvpn-data/db:/opt/openvpn-gui-tap/db
+       - /etc/openvpn:/etc/openvpn
+       - ./openvpn-data/db:/opt/openvpn-gui-tap/db
+       
