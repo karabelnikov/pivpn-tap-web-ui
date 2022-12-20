@@ -51,5 +51,5 @@ else
 fi
 
 mkdir -p db
-echo "Starting OpenVPNAdmin!"
+echo "Starting!"
 ./pivpn-tap-web-ui
