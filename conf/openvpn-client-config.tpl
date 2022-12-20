@@ -1,4 +1,3 @@
-{{ .ExtraClientOptions }}
 client
 proto {{ .Proto }}
 remote {{ .ServerAddress }} {{ .Port }}
@@ -14,10 +13,10 @@ persist-key
 cipher {{ .Cipher }}
 auth {{ .Auth }}
 auth-nocache
-# tls-client
+
+{{ .ExtraClientOptions }}
 
 ca {{ .Ca }}
 cert {{ .Cert }}
 key {{ .Key }}
 ta {{ .Ta }}
-
