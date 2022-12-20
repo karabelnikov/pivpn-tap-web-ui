@@ -1,4 +1,3 @@
-management {{ .Management }}
 dev {{ .Dev }}
 proto {{ .Proto }}
 port {{ .Port }}
@@ -24,13 +23,12 @@ auth {{ .Auth }}
 
 persist-key
 persist-tun
-crl-verify /etc/openvpn/easy-rsa/pki/crl.pem
+crl-verify /etc/openvpn/crl.pem
 
-# status /etc/openvpn/openvpn-status.log 20
-# status-version 3
-# syslog
 log /etc/openvpn/openvpn.log
 verb 3
 mute 10
 
 {{ .ExtraServerOptions }}
+
+management {{ .Management }}
