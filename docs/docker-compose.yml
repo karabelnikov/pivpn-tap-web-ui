@@ -1,8 +1,8 @@
 version: '2'
 services:
   gui:
-    image: pivpn-tap-web-ui:latest
-    container_name: openvpn-gui-tap
+    image: openvpn-web-gui:latest
+    container_name: openvpn-web-gui
     environment:
       - OPENVPN_ADMIN_USERNAME=admin
       - OPENVPN_ADMIN_PASSWORD=b3secure
