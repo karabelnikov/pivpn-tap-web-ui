@@ -1,3 +1,9 @@
+client
+proto {{ .Proto }}
+remote {{ .ServerAddress }} {{ .Port }}
+resolv-retry infinite
+nobind
+
 remote-cert-tls server
 tls-version-min 1.2
 verify-x509-name {{ .PiVPNServer }} name
