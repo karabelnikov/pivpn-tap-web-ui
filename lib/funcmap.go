@@ -44,7 +44,7 @@ func AddFuncMaps() {
 		}
 		return "Mapping error"
 	})
-	beego.AddFuncMap("printmbnet", func(i interface{}) string {
+	beego.AddFuncMap("printmb_net", func(i interface{}) string {
 		switch v := i.(type) {
 		case uint64:
 			return num2str(int64(i.(uint64)/1024/1024), '\u00A0')
